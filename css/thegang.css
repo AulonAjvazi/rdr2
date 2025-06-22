@@ -1,0 +1,305 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.custom-bg{
+    background-color: #FF0000;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; 
+}
+.banner {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-cover{
+    overflow: hidden;
+}
+
+.banner-cover img{
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    display: block;
+}
+
+@font-face {
+  font-family: "RDR Lino Regular";
+  src: url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot");
+  src: url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.svg#RDR Lino Regular") format("svg");
+}
+
+.rdr2-btn {
+    position: relative;
+    background-color: #8B0000;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: "RDR Lino Regular", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.rdr2-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.rdr2-btn:hover::after {
+    width: 100%;
+}
+
+.rdr2-btn:hover {
+    background-color: #a80000;
+    color: #fff;
+}
+
+.gang-wrapper {
+  margin: 0;
+  padding: 0;
+  background: url('../imgs/gang-cover.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: "RDR Lino Regular", sans-serif;
+  color: white;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.quote-box {
+  align-self: flex-end;
+  text-align: right;
+  max-width: 700px;
+  padding: 40px;
+}
+
+.quote-box h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.quote-box blockquote {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.desc-box {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.dutch-figure, .hose-figure, .molly-figure, .susan-figure, .pearson-figure, .micah-figure, .charles-figure, .bill-figure, .strauss-figure, .john-figure, .abigail-figure, .karen-figure, .javier-figure, .tilly-figure, .lenny-figure, .uncle-figure, .josiah-figure, .swanson-figure, .sean-figure, .sadie-figure, .arthur-figure {
+  position: absolute;
+  bottom: 0;
+  left: 600px;
+  top: 49px;
+  height: 85%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.jack-figure{
+  position: absolute;
+  bottom: 0;
+  left: 800px;
+  top: 20px;
+  height: 85%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gang-container{
+  display: flex;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .banner,
+  .banner img,
+  .banner-cover img {
+    width: 100vw;
+    max-width: 100vw;
+    height: 45vw;
+    min-height: 300px;
+    max-height: 420px;
+  }
+
+    .quote-box {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .quote-box h2 {
+    font-size: 20px;
+  }
+
+  .quote-box blockquote {
+    font-size: 18px;
+  }
+
+  .desc-box {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .dutch-figure {
+    left: 400px;
+    height: 70%;
+  }
+}
+
+/* Small devices (≤600px) */
+@media (max-width: 600px) {
+  .banner,
+  .banner img,
+  .banner-cover img {
+    width: 100vw;
+    max-width: 100vw;
+    height: 38vw;
+    min-height: 120px;
+    max-height: 180px;
+  }
+
+    .quote-box h2 {
+    font-size: 16px;
+  }
+
+  .quote-box blockquote {
+    font-size: 14px;
+  }
+
+  .desc-box {
+    font-size: 12px;
+  }
+
+  .dutch-figure {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+    .gang-wrapper {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .quote-box {
+    align-self: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .quote-box h2 {
+    font-size: 18px;
+  }
+
+  .quote-box blockquote {
+    font-size: 16px;
+  }
+
+  .desc-box {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .dutch-figure {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60%;
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .banner {
+    height: auto;
+    width: 100vw; /* Use viewport width, not 100vh */
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .banner-cover {
+    overflow: hidden;
+    height: 60vw; /* More realistic for mobile */
+  }
+  .banner-cover img {
+    width: 100vw;
+    height: 40vw;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@media (max-width: 3840px) {
+  .banner {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}

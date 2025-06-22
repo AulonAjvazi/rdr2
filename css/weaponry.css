@@ -1,0 +1,237 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.custom-bg{
+    background-color: #FF0000;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; 
+}
+.banner {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-cover{
+    overflow: hidden;
+}
+
+.banner-cover img{
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    display: block;
+}
+
+@font-face {
+  font-family: "RDR Lino Regular";
+  src: url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot");
+  src: url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.svg#RDR Lino Regular") format("svg");
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+  background-color: black;
+  text-align: center;
+}
+
+.about-txt {
+  font-family: "RDR Lino Regular", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  max-width: 90%;
+}
+
+.rdr2-btn {
+    position: relative;
+    background-color: #8B0000;
+    color: #fff;
+    border: 2px solid #000;
+    font-family: "RDR Lino Regular", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.rdr2-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.rdr2-btn:hover::after {
+    width: 100%;
+}
+
+.rdr2-btn:hover {
+    background-color: #a80000;
+    color: #fff;
+}
+
+.trailer{
+    display: flex;
+    justify-content: center;
+}
+
+.weapons {
+  width: 60%;
+  margin: 80px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .banner,
+  .banner img,
+  .banner-cover img {
+    width: 100vw;
+    max-width: 100vw;
+    height: 45vw;
+    min-height: 300px;
+    max-height: 420px;
+  }
+  .weapons {
+    width: 80vw;
+    max-width: 700px;
+    margin-top: 36px;
+  }
+  .about-txt {
+    font-size: 1.2rem;
+    max-width: 95%;
+  }
+}
+
+/* Small devices (≤600px) */
+@media (max-width: 600px) {
+  .banner,
+  .banner img,
+  .banner-cover img {
+    width: 100vw;
+    max-width: 100vw;
+    height: 38vw;
+    min-height: 120px;
+    max-height: 180px;
+  }
+  .about-txt {
+    font-size: 1rem;
+    padding: 0 2vw;
+    max-width: 99vw;
+  }
+  .weapons {
+    margin-top: 60px;
+  }
+  .about-txt {
+    font-size: 1.3rem;
+  }
+}
+
+/* 768px and below */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .about-txt {
+    font-size: 1.1rem;
+  }
+  .weapons {
+    width: 95%;
+    margin-top: 60px;
+  }
+}
+
+/* 600px and below */
+@media (max-width: 600px) {
+  .banner {
+    height: auto;
+    width: 100vw; /* Use viewport width, not 100vh */
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .banner-cover {
+    overflow: hidden;
+    height: 60vw; /* More realistic for mobile */
+  }
+  .banner-cover img {
+    width: 100vw;
+    height: 40vw;
+    object-fit: cover;
+    display: block;
+  }
+  .about-container {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: black;
+  }
+  .about-txt {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .weapons {
+    width: 98%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 3840px) {
+  .banner {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
