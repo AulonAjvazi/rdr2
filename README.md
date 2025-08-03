@@ -12,7 +12,6 @@ America, 1899. The end of the Wild West era has begun. After a robbery goes badl
 - Weaponry
 - about
 - the gang
-- Admin Login
 - included red dead redemption 2 trailer video
 
 ## Project
